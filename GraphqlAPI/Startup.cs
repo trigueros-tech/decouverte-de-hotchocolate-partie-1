@@ -46,7 +46,13 @@ namespace GraphqlAPI
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGraphQL();
+                endpoints.MapGraphQL()
+                    // .WithOptions(new GraphQLServerOptions
+                    // {
+                    //     Tool = { Enable = false}
+                    // })
+                    ;
+
             });
         }
     }
